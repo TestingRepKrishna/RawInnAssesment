@@ -1,0 +1,32 @@
+
+============================================================
+write a function that tests if a string is a palindrome
+
+def isPalindrome(s):
+    retrun s == s[::-1]
+
+s = "madam"
+result = isPalindrome(s)
+
+if result:
+   print("Yes")
+else:
+   print("No")
+
+Steps :  
+
+We create a function ispalindrome
+Return a variable by slicing the parameter in a reverse way
+In our driver code we wrote a string 
+Finally in our if-else condition we execute if it is a palindrome print yes or print no
+----------------------------------------------------------------------------------------------
+Scenario: Assert true for valid string palindromes
+    Given I have an application                        # Ok, I want to make sure the application shows up
+    When I submit a string                             # Ok, I have to fill in a text box and click the submit button
+    And The string is a palindrome                     # Ok, I need to do my calculation on the submitted string
+    Then The result should be true                     # Ok, I need to find the result on the page somewhere
+
+Scenario: Assert false for non-strings
+    Given I have an application                        # Ok, I want to make sure the application shows up
+    When I submit a non-string                         # Ok, I have to fill in a text box and click the submit button
+    Then The result should be false                    # Ok, I need to find the result on the page somewhere
