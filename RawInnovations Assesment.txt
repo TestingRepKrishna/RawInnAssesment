@@ -1,0 +1,62 @@
+Create a function that takes an array of numbers as a parameter and returns the number of
+values that are a multiplier of either 4 or 6 (or, of course, both).
+
+//declaring an array function
+multiplier(arr a[])
+{
+//initialising variables
+let result = []; j=0;
+//starting for loop to iterate array length of times
+for(i=0; i <a.length; i++)
+
+//checking condition if the values is multiplier of 4 or 6 or both
+if((a[i] % 4 ==0 ) ||(a[i] % 4 ==0) && (a[i] % 6 ==0))
+{
+//moving the value to array - result
+result[j] = a[i];
+console.log(result[j]);
+// incrementing j
+j++;
+}
+//returning result array
+return result;
+}
+}
+
+Scenario:retrun values are multiplier of either 4 or 6 or both 
+Given I have an application                                                           # Ok, I want to make sure the application shows up
+    When I taken an array of numbers                                                  # Ok, I have to fill in a text box with numbers and click the submit button
+    And The number is checking condition if values is multiplier of 4 or 6 or both    # Ok, I need to do check if the values given are multiplied of 4/6/both on the submitted string
+    Then  retrun the result                                                           # Ok, I need to find the result on the page somewhere
+
+============================================================
+write a function that tests if a string is a palindrome
+
+def isPalindrome(s):
+    retrun s == s[::-1]
+
+s = "RACECAR"
+result = isPalindrome(s)
+
+if result:
+   print("Yes")
+else:
+   print("No")
+
+Steps :  
+
+We create a function ispalindrome
+Return a variable by slicing the parameter in a reverse way
+In our driver code we wrote a string 
+Finally in our if-else condition we execute if it is a palindrome print yes or print no
+----------------------------------------------------------------------------------------------
+Scenario: Assert true for valid string palindromes
+    Given I have an application                        # Ok, I want to make sure the application shows up
+    When I submit a string                             # Ok, I have to fill in a text box and click the submit button
+    And The string is a palindrome                     # Ok, I need to do my calculation on the submitted string
+    Then The result should be true                     # Ok, I need to find the result on the page somewhere
+
+Scenario: Assert false for non-strings
+    Given I have an application                        # Ok, I want to make sure the application shows up
+    When I submit a non-string                         # Ok, I have to fill in a text box and click the submit button
+    Then The result should be false                    # Ok, I need to find the result on the page somewhere
